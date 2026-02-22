@@ -21,7 +21,7 @@
     </style>
 </head>
 
-<body class="p-14 bg-gray-100">
+<body class="body p-14 bg-gray-100 container mx-auto">
 
     <!-- upper body -->
     <section class="tracker-setion container mx-auto">
@@ -45,24 +45,25 @@
     <hr class="container mx-auto border border-[#e6e7e9FF] my-8">
     
     <!-- lower body -->
-    <section class="application-section container mx-auto">
+    <section id="main-section" class="application-section container mx-auto">
         <!-- upper-div -->
         <div class="flex justify-between">
             <h4 class="text-xl font-semibold">Available Jobs</h4>
-            <p>8 jobs</p>
+            <p id="job-count">8 jobs</p>
         </div>
 
         <!-- button-div -->
          <div class="grid grid-cols-1 sm:flex justify-start items-center gap-2 mt-6 mb-4">
-            <button class="btn btn-outline px-9 py-3 text-white bg-blue-500 text-[12px] font-semibold">All</button>
-            <button class="btn btn-outline text-[#64748bFF] bg-white text-[12px] font-medium border-none shadow-sm">Interview</button>
-            <button class="btn btn-outline text-[#64748bFF] bg-white text-[12px] font-medium border-none shadow-sm">Rejected</button>
+            <button id="ALL-btn" class="btn btn-outline px-9 py-3 text-white bg-blue-500 text-[12px] font-semibold">All</button>
+            <button id="interview-button" class="btn btn-outline text-[#64748bFF] bg-white text-[12px] font-medium border-none shadow-sm">Interview</button>
+            <button id="rejected-button" class=" btn btn-outline text-[#64748bFF] bg-white text-[12px] font-medium border-none shadow-sm">Rejected</button>
          </div>
 
          <!-- lower-div -->
 
 
-         <!-- job 1 -->
+         <div id="jobs-div">
+            <!-- job 1 -->
           <div class="p-6 bg-white rounded-md mb-4">
             <!-- texts and trash icon alignment -->
             <div class="flex justify-between items-center mb-5">
@@ -253,8 +254,18 @@
                  <button class="btn btn-outline px-5 py-3 text-red-500 text-[14px] font-semibold">REJECTED</button>
              </div>
           </div>
+         </div>
+         
 
-        
-    </section>
+        </section>
+
+           <div id="hidden-div" class="hidden bg-white lg:flex flex-col justify-center items-center px-60 py-28 rounded-md ">
+                <img class="mb-10" src="./B13-A4-PH-Job-Tracker/jobs.png" alt="">
+                <h4 class="text-2xl font-bold mb-1">No jobs available</h4>
+                <p class="text-[#64748bFF]">Check back soon for new job opportunities</p>
+            </div>
+
+          
+    <script src="./script/script.js"></script>
 </body>
 </html>
